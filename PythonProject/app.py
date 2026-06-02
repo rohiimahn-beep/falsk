@@ -8,9 +8,9 @@ def index():
       namaDepan = request.form['namaDepan']
       namaBelakang = request.form['namaBelakang']
       nama = '%s %s' % (namaDepan, namaBelakang)
-      p=nama
+      p = nama
       C = ' '
-      k=3
+      k = 3
       for i in range(len(p)):
          c = chr(ord(p[i]) + k)
          C = C + c
