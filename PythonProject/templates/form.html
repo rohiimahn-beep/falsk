@@ -1,17 +1,42 @@
 <html>
+
 <head>
-   <title>Demo Text</title>
+
+<title>Flask Encryptor</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
+
 <body>
-   <h2>Demo Text</h2>
-   
-   <form action="/" method="post">
-      Nama depan:<br />
-      <input type="text" name="namaDepan" size="25" /><br />
-      Nama belakang:<br />
-      <input type="text" name="namaBelakang" size="25" />
-      <p><input type="submit"  value="Kirim" /></p>
-   </form>
-   
+
+<div class="container">
+
+<h1>Flask Encryptor</h1>
+
+<form action="/" method="post">
+
+<input
+type="text"
+name="namaDepan"
+placeholder="Masukkan nama depan">
+
+<input
+type="text"
+name="namaBelakang"
+placeholder="Masukkan nama belakang">
+
+<button type="submit">
+
+Kirim
+
+</button>
+
+</form>
+
+</div>
+
 </body>
+
 </html>
