@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Patrick Hand', cursive;
+
+    background-image:url('/static/css/background.png.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.container{
+    background: #f4f3ea;
+    border:2px solid #d7d9c5;
+    border-radius: 30px;
+    padding: 40px 35px;
+    width: 520px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+h1{
+    font-size:48px;
+    color:#83936f;
+    line-height:1.2;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color: #9a7c6f;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    text-align:left;
+    font-size:18px;
+    font-weight: bold;
+    color: #9a7c6f;
+    margin-top:12px;
+    margin-bottom:6px;
+}
+
+.input-group{
+    position:relative;
+    margin-bottom:8px;
+}
+
+input{
+    width:100%;
+    padding: 14px 18px;
+    padding-right:45px;
+    border:2px solid #cfd6bf;
+    border-radius: 15px;
+    background:#ffffff;
+    font-family: "Comic Sans MS", cursive;
+    font-size:16px;
+    color: #6b705c;
+    outline: none;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color: #a8c090;
+    box-shadow:00 0 3px rgba(168,192,144,0.25);
+}
+
+input::placeholder{
+    color: #b7b7a4;
+}
+
+.icon-right{
+    position:absolute;
+    right: 14px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size:18px;
+    color:#a8b695;
+    pointer-events:none;
+}
+
+button{
+    width: 100%;
+    background: #9daa84;
+    color:white;
+    border:none;
+    padding: 16px;
+    border-radius: 18px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top: 20px;
+    transition:0.3s;
+    font-family:"Comic Sans MS", cursive;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+button:hover{
+    background: #83936f;
+    transform: translateY(-2px);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+th{
+    background:#9daa84;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+    background:#f6f8ef;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#9daa84;
+    color:white;
+    padding:12px 20px;
+    border-radius:15px;
+}
+
+.total-box{
+    background:#f6f8ef;
+    border:2px solid #cfd6bf;
+    border-radius:20px;
+    padding:20px;
+    margin:20px 0;
+    text-align:center;
+}
+
+.total-box h2{
+    margin-top:10px;
+    color:#83936f;
+}

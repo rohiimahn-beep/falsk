@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard Pengeluaran</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Dashboard Pengeluaran</h1>
+
+    <p class="subtitle">
+        Histori pengeluaran yang sudah kamu simpan ✨
+    </p>
+
+    <div class="total-box">
+    💰 Total Pengeluaran
+
+    <h2>
+        Rp {{ total }}
+    </h2>
+    </div>
+
+    <table>
+
+        <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Kategori</th>
+            <th>Jumlah</th>
+        </tr>
+
+        {% for item in data %}
+
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ item.tanggal }}</td>
+            <td>{{ item.kategori }}</td>
+            <td>Rp {{ item.jumlah }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/" class="btn">
+        ➕ Tambah Pengeluaran
+    </a>
+
+    <br><br>
+
+    <a href="/preview" class="btn">
+        📄 Preview Laporan
+    </a>
+
+</div>
+
+</body>
+</html>

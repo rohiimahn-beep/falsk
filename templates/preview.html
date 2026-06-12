@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preview Laporan</title>
+
+    <style>
+
+    body{
+        font-family: Arial;
+        background-image:url("/static/background.jpg");
+        background-size:cover;
+        background-position:center;
+        min-height:100vh;
+        padding:40px;
+    }
+
+    .card{
+        max-width:900px;
+        margin:auto;
+        background:white;
+        border-radius:20px;
+        padding:30px;
+        box-shadow:0 0 20px rgba(0,0,0,0.15);
+    }
+
+    h1{
+        text-align:center;
+        color:#6d8b74;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+        margin-top:20px;
+    }
+
+    th{
+        background:#a4c3a2;
+        color:white;
+        padding:12px;
+    }
+
+    td{
+        border:1px solid #ddd;
+        padding:10px;
+        text-align:center;
+    }
+
+    .total{
+        margin-top:20px;
+        font-size:22px;
+        font-weight:bold;
+        color:#6d8b74;
+    }
+
+    .btn{
+        display:inline-block;
+        padding:12px 25px;
+        text-decoration:none;
+        border-radius:12px;
+        margin-top:20px;
+        color:white;
+    }
+
+    .pdf{
+        background:#6d8b74;
+    }
+
+    .back{
+        background:#999;
+    }
+
+    </style>
+
+</head>
+<body>
+
+<div class="card">
+
+<h1>🌸 Laporan Pengeluaran 🌸</h1>
+
+<table>
+
+<tr>
+<th>No</th>
+<th>Tanggal</th>
+<th>Kategori</th>
+<th>Jumlah</th>
+</tr>
+
+{% for item in data %}
+
+<tr>
+<td>{{ loop.index }}</td>
+<td>{{ item.tanggal }}</td>
+<td>{{ item.kategori }}</td>
+<td>Rp {{ item.jumlah }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<div class="total">
+<div style="
+background:#eef5e8;
+padding:20px;
+border-radius:15px;
+margin-top:20px;
+font-size:24px;
+font-weight:bold;
+color:#6d8b74;
+">
+
+💰 Total Pengeluaran
+
+<br><br>
+
+Rp {{ total }}
+
+</div>
+
+<div style="margin-top:30px; color:#666;">
+📅 Dicetak pada:
+{{ now }}
+</div>
+
+<br><br>
+
+<div style="
+background:#f7faf4;
+padding:25px;
+border-radius:20px;
+border:2px dashed #b7c7b2;
+width:350px;
+margin:auto;
+text-align:center;
+">
+
+<h3>🌸 Verifikasi Laporan 🌸</h3>
+
+<img src="{{ url_for('static', filename='qr.png') }}"
+width="180">
+
+<br><br>
+
+<hr style="
+width:220px;
+margin:auto;
+border:1px solid #8ba38d;
+">
+
+<br>
+
+Pengelola Expense Tracker
+
+</div>
+
+<br>
+
+<a href="/" class="btn back">
+⬅ Kembali
+</a>
+
+<a href="/pdf" class="btn pdf">
+📄 Download PDF
+</a>
+
+</div>
+
+</body>
+</html>
+
+<hr>
+
+<p style="text-align:center;color:#777;">
+
+Expense Tracker Mahasiswa
+
+<br>
+
+Dibuat menggunakan Flask & PythonAnywhere
+
+</p>

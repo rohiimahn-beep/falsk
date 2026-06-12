@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Mahasiswa</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💰 Expense Tracker<br>Mahasiswa <span style="color:#ffb6c1;">♡</span></h1>
+
+        <p class="subtitle">
+            Kelola pengeluaran harianmu dengan mudah 🌿
+        </p>
+
+        <form method="POST">
+
+            <label>📅 Tanggal Pengeluaran</label>
+
+            <div class="input-group">
+                <input
+                    type="date"
+                    name="tanggal"
+                    required>
+            </div>
+
+            <label>🏷️ Kategori Pengeluaran</label>
+
+            <div class="input-group">
+                <input
+                    type="text"
+                    name="kategori"
+                    placeholder="Contoh: Makan, Transport, Pulsa"
+                    required>
+            </div>
+
+            <label>💸 Jumlah Pengeluaran</label>
+
+            <div class="input-group">
+                <input
+                    type="number"
+                    name="jumlah"
+                    placeholder="Masukkan nominal"
+                    required>
+            </div>
+
+            <button type="submit">
+
+                <span style="font-size:20px;">💾</span>
+
+                Simpan Pengeluaran
+
+                <span style="font-size:18px;">♡</span>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
